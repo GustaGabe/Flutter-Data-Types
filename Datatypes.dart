@@ -30,6 +30,47 @@ void main() {
   print('Anonymous function result: ${anonymousAdd(15, 45)}');
 
 
+  print('\n==============================\n');
+
+  // Working with Lists
+  List<int> intList = [18, 26, 37, 42];
+  List<String> fruits = ['Apple', 'Banana', 'Orange', 'Grape', 'Mango'];
+
+  // 1 - Accessing elements
+  print('Accessing elements:');
+  print(intList[3]); // Should print 42
+  print(fruits[1]);  // Should print Banana
+
+  print('\n==============================');
+  print('Fruit List');
+  print('==============================');
+  fruits.forEach((fruit) {
+    print('Fruit: $fruit');
+  });
+
+  // 2 - Adding an element
+  print('\nList length before adding: ${fruits.length}');
+  print('\nAdding fruit to the list...');
+  fruits.add('Pineapple');
+  fruits.forEach((fruit) {
+    print('Fruit: $fruit');
+  });
+  print('List length after adding: ${fruits.length}');
+
+  // 3 - Removing elements
+  print('\nRemoving fruits from the list...');
+  fruits.remove('Orange');     // Remove by value
+  fruits.removeAt(3);          // Remove by index
+  fruits.forEach((fruit) {
+    print('Fruit: $fruit');
+  });
+  print('List length after removing: ${fruits.length}');
+
+  // First and last elements
+  print('\nFirst fruit in the list: ${fruits.first}');
+  print('Last fruit in the list: ${fruits.last}');
+}
+
 // Basic greeting
 void greet() {
   print('Welcome');
